@@ -1,14 +1,13 @@
-from langchain.document_loaders import DirectoryLoader
+from langchain_community.document_loaders import DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema import Document
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores.chroma import Chroma
+from langchain_openai.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores.chroma import Chroma
 import os
 import shutil
 
 CHROMA_PATH = "chroma"
-DATA_PATH = "data/books"
-
+DATA_PATH = "/Users/aakashsuresh/Desktop/VSProject/GenAI_Basic/RAG_with_Langchain/data/books"
 
 def main():
     generate_data_store()
